@@ -23,7 +23,7 @@ public class RestWebController {
     @RequestMapping(value="/postcustomer", method=RequestMethod.POST)
     public String postCustomer(@RequestBody Customer customer){
         cust.add(customer);
-        System.out.println("Okk");
+        System.out.println("Okkk");
         return "Sucessful!";
     }
 }
