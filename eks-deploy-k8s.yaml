@@ -9,13 +9,18 @@ spec:
   selector:
     matchLabels:
       app: springboot-app
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
   template:
     metadata:
       labels:
         app: springboot-app
     spec:
       containers:
-        - name: my-springboot-app
+        - name: springboot-app
           image: 092369361076.dkr.ecr.us-east-1.amazonaws.com/test-ecr:latest
           imagePullPolicy: Always
           ports:
