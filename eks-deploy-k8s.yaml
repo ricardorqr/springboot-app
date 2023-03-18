@@ -24,7 +24,7 @@ spec:
           image: 092369361076.dkr.ecr.us-east-1.amazonaws.com/test-ecr:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 8085
+            - containerPort: 8080
               name: http
               protocol: TCP
 
@@ -42,7 +42,7 @@ spec:
     - name: http
       port: 80
       protocol: TCP
-      targetPort: 8085
+      targetPort: 8080
   type: LoadBalancer
   selector:
     app: springboot-app
